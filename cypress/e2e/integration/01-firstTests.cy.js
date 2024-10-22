@@ -25,4 +25,20 @@ describe('My First Tests', () => {
 
     cy.url().should('contain', 'https://www.techglobal-training.com/')
   })
+
+  it('My First Test', () => {
+
+    // expect(true).to.equal(false)
+
+    cy.visit('https://techglobal-training.com/frontend')
+
+    // cy.get('#logo').click()
+    // cy.get('#logo').should('be.visible')
+
+    cy.get('#logo').click().should('be.visible')
+
+    /// 'burak' === 'burak'
+
+    /// logo === 'burak
+  })
 })
