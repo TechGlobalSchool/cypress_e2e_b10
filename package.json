@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^13.15.0"
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "cypress": "^13.15.0",
+    "cypress-real-events": "^1.13.0"
   }
 }
