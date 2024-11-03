@@ -2,7 +2,6 @@
 
 describe("Handling iFrames", () => {
   beforeEach(() => {
-    cy.visit("https://www.techglobal-training.com/frontend");
     cy.contains(".card", "IFrames").click();
   });
 

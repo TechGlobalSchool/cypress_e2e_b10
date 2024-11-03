@@ -20,3 +20,7 @@ import '@4tw/cypress-drag-drop'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+beforeEach(() => {
+  cy.visit(`${Cypress.env('SITE_URL')}/frontend`);
+});

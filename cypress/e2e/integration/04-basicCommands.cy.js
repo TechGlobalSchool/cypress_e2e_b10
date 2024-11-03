@@ -2,7 +2,6 @@
 
 describe("Cypress Selectors", () => {
   beforeEach(() => {
-    cy.visit("https://www.techglobal-training.com/frontend");
     cy.contains(".card", "HTML Elements").click();
   });
 

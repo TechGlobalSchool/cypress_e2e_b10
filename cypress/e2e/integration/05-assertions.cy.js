@@ -3,7 +3,7 @@
 describe("Assertions", () => {
   beforeEach(() => {
     // This will fail if the page doesn't send text/html with a 200 status
-    cy.visit("https://www.techglobal-training.com/frontend");
+    // cy.visit("https://www.techglobal-training.com/frontend");
     cy.contains(".card", "HTML Elements").click();
   });
 
