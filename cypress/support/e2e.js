@@ -14,13 +14,20 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 import "cypress-real-events";
-import '@4tw/cypress-drag-drop'
+import "@4tw/cypress-drag-drop";
+// import exec from "child_process";
+// import spawn from "child_process";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
+// before(() => {
+//   exec("npm run start:server");
+//   cy.exec("npm run start:server")
+// });
+
 beforeEach(() => {
-  cy.visit(`${Cypress.env('SITE_URL')}/frontend`);
+  cy.visit(`${Cypress.env("SITE_URL")}/frontend`);
 });

@@ -44,4 +44,8 @@ describe("File Download & File Upload", () => {
     // Next Test - If you want to overwrite
     cy.log(Cypress.env('SITE_URL', 'https://www.google.com/'))
   })
+
+  it.only('Test Server', () => {
+    cy.visit('http://127.0.0.1:5500/index.html')
+  })
 })

@@ -5,6 +5,7 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   viewportWidth: 1920,
   chromeWebSecurity: false,
+  // defaultCommandTimeout: 4 * 1000,
   // retries: 2,
 
   env: {
