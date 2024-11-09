@@ -45,7 +45,7 @@ describe("File Download & File Upload", () => {
     cy.log(Cypress.env('SITE_URL', 'https://www.google.com/'))
   })
 
-  it.only('Test Server', () => {
-    cy.visit('http://127.0.0.1:5500/index.html')
-  })
+  // it.only('Test Server', () => {
+  //   cy.visit('http://127.0.0.1:5500/index.html')
+  // })
 })

@@ -21,6 +21,7 @@ describe("File Download & File Upload", () => {
     //     throw new Error("File deletion failed:" + err.message);
     //   }
     // })
+    cy.readFile(downloadPath)
   });
 
   /**

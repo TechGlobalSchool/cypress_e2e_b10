@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-describe("Handling Alerts", () => {
+describe("Handling Alerts", { tags: ['@smoke', '@regression'] }, () => {
   beforeEach(() => {
     cy.clickCard("Alerts");
   });
