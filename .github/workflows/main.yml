@@ -1,5 +1,11 @@
 name: End-to-end tests
-on: push
+on:
+  # Trigget workflow on any push to any branch
+  push:
+
+  # Trigger workflow on scheduled basis.
+  schedule:
+     -cron: '30 2 * * 6' # Every Saturday at 2:30 AM UTC
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
@@ -15,3 +21,13 @@ jobs:
           # headed: false
           # spec: cypress/e2e/spec1.cy.js
           command: npm run test:smoke
+
+      - name: Artifacts
+      - uses: actions/upload-artifact@v4
+        # add the line below to store screenshots only on failures
+        # if: failure()
+        with:
+          name: Cypress Reports
+          path: cypress/reports/html/index.html
+          if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
+
