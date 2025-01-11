@@ -14,10 +14,10 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import "./commands";
-import "cypress-real-events";
-import "@4tw/cypress-drag-drop";
-import 'cypress-mochawesome-reporter/register';
+import './commands'
+import 'cypress-real-events'
+import '@4tw/cypress-drag-drop'
+import 'cypress-mochawesome-reporter/register'
 // import exec from "child_process";
 // import spawn from "child_process";
 
@@ -31,6 +31,6 @@ registerCypressGrep()
 //   cy.exec("npm run start:server")
 // });
 
-beforeEach(() => {
-  cy.visit(`${Cypress.env("SITE_URL")}/frontend`);
-});
+// beforeEach(() => {
+//   cy.visit(`${Cypress.env('SITE_URL')}/frontend`)
+// })

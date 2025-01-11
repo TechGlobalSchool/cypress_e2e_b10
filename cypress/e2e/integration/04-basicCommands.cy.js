@@ -1,9 +1,9 @@
 /// <reference types="cypress"/>
 
-describe("Cypress Selectors", () => {
+describe('Cypress Selectors', () => {
   beforeEach(() => {
-    cy.contains(".card", "HTML Elements").click();
-  });
+    cy.contains('.card', 'HTML Elements').click()
+  })
 
   /**
    * Visit the techglobal frontend page
@@ -14,27 +14,27 @@ describe("Cypress Selectors", () => {
    * Validate "You clicked on “Sign in”" text is visible
    */
 
-  it("Click Action", () => {
+  it('Click Action', () => {
     // .should('have.text', 'expectedText')
 
-    cy.get("#register_button").click();
-    cy.get(".mt-1").should("have.text", "You clicked on “Register”");
+    cy.get('#register_button').click()
+    cy.get('.mt-1').should('have.text', 'You clicked on “Register”')
 
-    cy.get("#signin_button").click();
-    cy.get(".mt-1").should("have.text", "You clicked on “Sign in”");
+    cy.get('#signin_button').click()
+    cy.get('.mt-1').should('have.text', 'You clicked on “Sign in”')
 
-    cy.get("#register_button")
+    cy.get('#register_button')
       .click()
       .next()
       .next()
-      .should("have.text", "You clicked on “Register”")
+      .should('have.text', 'You clicked on “Register”')
       .prev()
       .click()
       .next()
-      .should("have.text", "You clicked on “Sign in”");
-  });
+      .should('have.text', 'You clicked on “Sign in”')
+  })
 
-  it("Checkbox & Radio Buttons", () => {
+  it('Checkbox & Radio Buttons', () => {
     // .check()
 
     // This assertion will not work, because '#apple_check' targets <label> web element
@@ -55,11 +55,11 @@ describe("Cypress Selectors", () => {
      * 4. Validate its unchecked
      */
 
-    cy.get("#checkbox_1")
+    cy.get('#checkbox_1')
       .check()
-      .should("be.checked")
+      .should('be.checked')
       .uncheck()
-      .should("not.be.checked");
+      .should('not.be.checked')
 
     /**
      * 1. Locate the "Java" radio button, and validate its not checked
@@ -67,13 +67,13 @@ describe("Cypress Selectors", () => {
      * 3. Validate its checked.
      */
 
-    cy.get("#radio_1_option_1")
-      .should("not.be.checked")
+    cy.get('#radio_1_option_1')
+      .should('not.be.checked')
       .check()
-      .should("be.checked");
-  });
+      .should('be.checked')
+  })
 
-  it("Text Input", () => {
+  it('Text Input', () => {
     // .type('TechGlobal')
     // .clear()
 
@@ -87,36 +87,36 @@ describe("Cypress Selectors", () => {
      * .should('be.empty')
      */
 
-    const inputs = ["Tech", "Global"];
-    const [first, last] = inputs;
+    const inputs = ['Tech', 'Global']
+    const [first, last] = inputs
 
     cy.get('[data-identifier="Text Inputs"] input').each(($el, index) => {
       cy.wrap($el)
         .type(inputs[index])
-        .should("have.value", inputs[index])
+        .should('have.value', inputs[index])
         .clear()
-        .should("be.empty");
-    });
+        .should('be.empty')
+    })
 
     // cy.get('#text_input1').type(first).should('have.value', first)
     // .clear().should('be.empty').next().children('div').children()
     // .type(last).should('have.value', last)
     // .clear().should('be.empty')
 
-    cy.get("#text_input1")
+    cy.get('#text_input1')
       .type(first)
-      .should("have.value", first)
+      .should('have.value', first)
       .clear()
-      .should("be.empty");
+      .should('be.empty')
 
-    cy.get("#text_input2")
+    cy.get('#text_input2')
       .type(last)
-      .should("have.value", last)
+      .should('have.value', last)
       .clear()
-      .should("be.empty");
-  });
+      .should('be.empty')
+  })
 
-  it("Date Inputs", () => {
+  it('Date Inputs', () => {
 
     /**
      * Locate the first date input
@@ -125,10 +125,10 @@ describe("Cypress Selectors", () => {
      * Repeat the same thing with second date input
      */
 
-    cy.get("#date_input1").type("01/01/2020{enter}");
+    cy.get('#date_input1').type('01/01/2020{enter}')
 
-    cy.get("#date_input2").clear().type("01/01/2020{esc}");
-  });
+    cy.get('#date_input2').clear().type('01/01/2020{esc}')
+  })
 
   it('Dropdowns', () => {
     
@@ -152,4 +152,4 @@ describe("Cypress Selectors", () => {
     cy.get('#shipment_dropdown').click()
     cy.contains('[role="option"]', 'Pick up').click()
   })
-});
+})

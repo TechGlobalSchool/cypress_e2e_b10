@@ -1,0 +1,9 @@
+{
+  "putRequestBody": {
+    "DOB": "1990-01-01",
+    "EMAIL": "updatedtestTechGlobal@gmail.com",
+    "FIRST_NAME": "updatedTest",
+    "LAST_NAME": "updatedUser",
+    "INSTRUCTOR_ID": 1
+  }
+}

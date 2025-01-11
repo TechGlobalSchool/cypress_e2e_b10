@@ -1,9 +1,9 @@
 /// <reference types="cypress"/>
 
-describe("Debugging", () => {
+describe('Debugging', () => {
   beforeEach(() => {
-    cy.clickCard("HTML Elements");
-  });
+    cy.clickCard('HTML Elements')
+  })
 
   it('cy.wait() - Hard Wait', () => {
 
@@ -16,8 +16,8 @@ describe("Debugging", () => {
 
   it('cy.pause() - Debugging use pauge', () => {
 
-    cy.visit(`${Cypress.env("SITE_URL")}/frontend`);
-    cy.clickCard("Login Function");
+    cy.visit(`${Cypress.env('SITE_URL')}/frontend`)
+    cy.clickCard('Login Function')
 
     cy.get('#username').type(Cypress.env('UI_USERNAME'))
 
@@ -32,8 +32,8 @@ describe("Debugging", () => {
 
   it('cy.debug() - Debugging use debug', () => {
 
-    cy.visit(`${Cypress.env("SITE_URL")}/frontend`);
-    cy.clickCard("Login Function");
+    cy.visit(`${Cypress.env('SITE_URL')}/frontend`)
+    cy.clickCard('Login Function')
 
     cy.get('#username').type(Cypress.env('UI_USERNAME'))
 

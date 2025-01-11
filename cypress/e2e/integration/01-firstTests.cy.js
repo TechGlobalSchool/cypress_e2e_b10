@@ -9,7 +9,7 @@ describe('My First Tests', () => {
     cy.visit('https://techglobal-training.com/')
 
     // Command to refresh your current url
-    cy.reload();
+    cy.reload()
 
     cy.visit('https://techglobal-training.com/frontend')
 

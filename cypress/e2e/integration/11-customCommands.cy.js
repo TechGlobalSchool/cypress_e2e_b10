@@ -1,10 +1,10 @@
 /// <reference types="cypress"/>
 
 
-describe("File Download & File Upload", () => {
+describe('File Download & File Upload', () => {
   beforeEach(() => {
-    cy.clickCard("HTML Elements");
-  });
+    cy.clickCard('HTML Elements')
+  })
 
   it('Parent Command', () => {
     /* Parent Commands */

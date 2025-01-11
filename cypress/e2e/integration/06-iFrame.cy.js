@@ -1,17 +1,17 @@
 /// <reference types="cypress"/>
 
-describe("Handling iFrames", () => {
+describe('Handling iFrames', () => {
   beforeEach(() => {
-    cy.contains(".card", "IFrames").click();
-  });
+    cy.contains('.card', 'IFrames').click()
+  })
 
-  it("iFrame", () => {
-    cy.get("#form_frame")
-      .its("0.contentDocument.body")
-      .should("not.be.empty")
-      .find("#first_name")
-      .type("myName");
-  });
+  it('iFrame', () => {
+    cy.get('#form_frame')
+      .its('0.contentDocument.body')
+      .should('not.be.empty')
+      .find('#first_name')
+      .type('myName')
+  })
 
   /**
    * Go to https://techglobal-training.com/frontend/
@@ -24,18 +24,18 @@ describe("Handling iFrames", () => {
 
   const arr = ['Tech', 'Global']
 
-  it("iFrame Test Case", () => {
+  it('iFrame Test Case', () => {
 
-    cy.get("#form_frame")
-    .its("0.contentDocument.body")
-    .find('[id$="name"]').each(($el, index) => {
-      cy.wrap($el).type(arr[index])
-    })
+    cy.get('#form_frame')
+      .its('0.contentDocument.body')
+      .find('[id$="name"]').each(($el, index) => {
+        cy.wrap($el).type(arr[index])
+      })
 
-    cy.get("#form_frame")
-    .its("0.contentDocument.body")
-    .find('#submit').click()
+    cy.get('#form_frame')
+      .its('0.contentDocument.body')
+      .find('#submit').click()
 
     cy.get('#result').should('have.text', `You entered: ${arr.join(' ')}`)
-  });
-});
+  })
+})

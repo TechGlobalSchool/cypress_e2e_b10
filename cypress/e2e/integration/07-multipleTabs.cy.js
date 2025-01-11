@@ -1,17 +1,17 @@
 /// <reference types="cypress"/>
 
-describe("Handling Multiple Windows", () => {
+describe('Handling Multiple Windows', () => {
   beforeEach(() => {
-    cy.clickCard("Multiple Windows");
-  });
+    cy.clickCard('Multiple Windows')
+  })
 
-  it("Tabs", () => {
-    cy.get("#microsoft").should("have.attr", "target", "_blank");
+  it('Tabs', () => {
+    cy.get('#microsoft').should('have.attr', 'target', '_blank')
 
-    cy.get("#microsoft").invoke("removeAttr", "target").click();
+    cy.get('#microsoft').invoke('removeAttr', 'target').click()
 
     // cy.url().should('contains', 'microsoft')
-  });
+  })
 
   /**
    * Go to https://techglobal-training.com/frontend/
@@ -22,7 +22,7 @@ describe("Handling Multiple Windows", () => {
    * Validate title contains "techglobal"
    */
 
-  it("Test Case", () => {
+  it('Test Case', () => {
 
     cy.get('#apple').invoke('removeAttr', 'target').click()
     cy.title().should('contain', 'Apple')
@@ -32,5 +32,5 @@ describe("Handling Multiple Windows", () => {
     cy.title().then((title) => {
       cy.wrap(title.toLowerCase()).should('contain', 'techglobal')
     })
-  });
-});
+  })
+})

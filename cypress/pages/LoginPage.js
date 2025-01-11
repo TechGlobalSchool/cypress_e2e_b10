@@ -1,22 +1,22 @@
-import BasePage from "./BasePage"
+import BasePage from './BasePage'
 
 class LoginPage extends BasePage {
 
   /* Locators */
   getUserNameField() {
-    return cy.get("#username")
+    return cy.get('#username')
   }
 
   getPasswordField() {
-    return cy.get("#password")
+    return cy.get('#password')
   }
 
   getSubmitButton() {
-    return cy.get("#login_btn")
+    return cy.get('#login_btn')
   }
 
   getSuccessMessage() {
-    return cy.get("#success_lgn")
+    return cy.get('#success_lgn')
   }
 
   getErrorMessage() {

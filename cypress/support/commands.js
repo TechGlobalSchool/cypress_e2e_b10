@@ -13,8 +13,16 @@
 // Cypress.Commands.add('login', (email, password) => { ... })
 //
 
+Cypress.Commands.add('validateResponse', (responseData, expectedData) => {
+
+  Object.entries(expectedData).forEach(([key, value]) => {
+    cy.log(`Key: ${key} Value: ${value}`)
+    expect(responseData.body[key]).to.eq(value)
+  })
+})
+
 Cypress.Commands.add('clickCard', (link) => {
-  cy.contains('.card, [class*="projectCard"]', link).click();
+  cy.contains('.card, [class*="projectCard"]', link).click()
 })
 
 Cypress.Commands.add('selectDropdownOption', (locator, option) => {

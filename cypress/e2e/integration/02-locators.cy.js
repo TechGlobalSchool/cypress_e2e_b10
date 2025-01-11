@@ -1,20 +1,20 @@
 /// <reference types="cypress"/>
 
-describe("CSS Locators", () => {
-  it("Understanding CSS Syntax - Locating using tags", () => {
-    cy.visit("https://www.techglobal-training.com/frontend/html-elements");
+describe('CSS Locators', () => {
+  it('Understanding CSS Syntax - Locating using tags', () => {
+    cy.visit('https://www.techglobal-training.com/frontend/html-elements')
 
-    cy.get("button");
+    cy.get('button')
 
-    cy.get("h3");
+    cy.get('h3')
 
-    cy.get("li");
+    cy.get('li')
 
-    cy.get("input");
-  });
+    cy.get('input')
+  })
 
-  it("Understanding CSS Syntax - Locating class and ID", () => {
-    cy.visit("https://www.techglobal-training.com/frontend/html-elements");
+  it('Understanding CSS Syntax - Locating class and ID', () => {
+    cy.visit('https://www.techglobal-training.com/frontend/html-elements')
 
 
     cy.get('#checkbox-button-group')
@@ -22,17 +22,17 @@ describe("CSS Locators", () => {
     cy.get('.checkbox')
 
     // class="nadja_tugba youseff jibril kareem maria alina david timur bermet"
-  });
+  })
 
-  it("Understanding CSS Syntax - Locating web elements using multiple selectors", () => {
-    cy.visit("https://www.techglobal-training.com/frontend/html-elements");
+  it('Understanding CSS Syntax - Locating web elements using multiple selectors', () => {
+    cy.visit('https://www.techglobal-training.com/frontend/html-elements')
 
     
     cy.get('label.checkbox.is-inline')
-  });
+  })
 
-  it("Understanding CSS Syntax - Locating child, descendant, adjacent web element", () => {
-    cy.visit("https://www.techglobal-training.com/frontend/html-elements");
+  it('Understanding CSS Syntax - Locating child, descendant, adjacent web element', () => {
+    cy.visit('https://www.techglobal-training.com/frontend/html-elements')
 
     /**
      * Child Selector ( > ) *
@@ -90,11 +90,11 @@ describe("CSS Locators", () => {
      * 2. Validate  "Enter Text Here" input bar is visible
      * 3. Validate "Facebook" link is visible
      */
-  });
+  })
 
 
   it('Locating the element using Attribute Selectors', () => {
-    cy.visit("https://www.techglobal-training.com/frontend/html-elements");
+    cy.visit('https://www.techglobal-training.com/frontend/html-elements')
 
     // These are proper way to locate the class and id
     cy.get('#checkbox-button-group')
@@ -114,7 +114,7 @@ describe("CSS Locators", () => {
 
   it('Test Case', () => {
 
-  /**
+    /**
    * TEST CASE 1
    * Go to https://techglobal-training.com/frontend/dynamic-elements
    * Locate the below box is displayed
@@ -128,7 +128,7 @@ describe("CSS Locators", () => {
 
 
 
-  /**
+    /**
    * @example:
    * [class="className"] 
    * [id="idName"]
@@ -141,19 +141,19 @@ describe("CSS Locators", () => {
    * ends-with    => [id$="box_1_"]
    */
 
-  cy.visit('https://techglobal-training.com/frontend/dynamic-elements')
+    cy.visit('https://techglobal-training.com/frontend/dynamic-elements')
 
-  cy.get('[id^="box_1_"]').should('be.visible')
-  cy.get('[id*="box_2_"]').should('be.visible')
+    cy.get('[id^="box_1_"]').should('be.visible')
+    cy.get('[id*="box_2_"]').should('be.visible')
 
-  // cy.get('[id^="box_1_"], [id*="box_2_"]')
+    // cy.get('[id^="box_1_"], [id*="box_2_"]')
 
   // cy.get('[id^="box_"]')
   })
 
   it('Pseudo Classes', () => {
 
-    cy.visit("https://www.techglobal-training.com/frontend/html-elements")
+    cy.visit('https://www.techglobal-training.com/frontend/html-elements')
 
     cy.get('#ordered_list > li:first-child')
     cy.get('#ordered_list > li:last-child')
@@ -170,4 +170,4 @@ describe("CSS Locators", () => {
 
     cy.get('.checkbox:where(#apple_check, #microsoft_check)')
   })
-});
+})

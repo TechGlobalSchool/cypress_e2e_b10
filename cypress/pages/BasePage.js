@@ -1,28 +1,28 @@
 class BasePage {
   /* Locators */
   getLogo() {
-    return cy.get("#logo");
+    return cy.get('#logo')
   }
 
   getTestingDropdown() {
-    return cy.get("#dropdown-testing");
+    return cy.get('#dropdown-testing')
   }
 
   getExercisesDropdown() {
-    return cy.get("#dropdown-exercises");
+    return cy.get('#dropdown-exercises')
   }
 
   getMainHeading() {
-    return cy.get("#main_heading");
+    return cy.get('#main_heading')
   }
 
   getMockInterviews() {
-    return cy.contains("div", "Mock Interviews");
+    return cy.contains('div', 'Mock Interviews')
   }
 
   /* Methods */
   hoverTestingDropdown() {
-    this.getTestingDropdown().realHover();
+    this.getTestingDropdown().realHover()
   }
 
   /**
@@ -32,25 +32,25 @@ class BasePage {
    * @throws {Error} If the option is invalid.
    */
   clickTestingDropdownOption(option) {
-    this.hoverTestingDropdown();
+    this.hoverTestingDropdown()
 
     const optionMapping = {
-      "Frontend Testing": "#frontend-option",
-      "Backend Testing": "#backend-option",
-    };
-
-    const optionSelector = optionMapping[option];
-
-    if (!optionSelector) {
-      throw new Error(`Invalid option: ${option}`);
+      'Frontend Testing': '#frontend-option',
+      'Backend Testing': '#backend-option',
     }
 
-    cy.get(optionSelector).realClick();
+    const optionSelector = optionMapping[option]
 
-    cy.on("uncaught:exception", () => {
-      return false;
-    });
+    if (!optionSelector) {
+      throw new Error(`Invalid option: ${option}`)
+    }
+
+    cy.get(optionSelector).realClick()
+
+    cy.on('uncaught:exception', () => {
+      return false
+    })
   }
 }
 
-export default BasePage;
+export default BasePage
